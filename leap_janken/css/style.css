@@ -1,0 +1,19 @@
+#screen,body #gesture p,table tr td{text-align:center}
+#screen{width:100%;height:auto;color:#fff;padding:50px 0}
+#screen h1{font-size:2.5em;display:inline-block}
+table{margin:auto}
+table tr td{vertical-align:middle;width:200px}
+table tr td span.chara{font-size:4em}
+table tr td p{font-size:3em;font-weight:700;-webkit-transform:rotate(-4deg);-ms-transform:rotate(-4deg);transform:rotate(-4deg)}
+table tr .resultP{background:0 0;-webkit-transition:.25s;transition:.25s}
+table tr .resultM{background:0 0}
+table tr .pahImg{background:url(../images/pah_.png)}
+table tr .chokiImg{background:url(../images/choki_.png)}
+table tr .guhImg{background:url(../images/guh_.png)}
+table tr .result{background-size:50% 50%;width:200px;height:200px;background-repeat:no-repeat;background-position:center center}
+table tr .while{width:300px}
+body{margin:0;padding:0;position:relative;font-family:'Courier New',Courier,monospace}
+body #gesture p{font-size:30px}
+body #fingers,body #state{text-align:center;padding:0;margin:0}
+body #content{width:100%;height:100%;position:fixed;bottom:20px}
+body #content canvas{margin:0 auto}

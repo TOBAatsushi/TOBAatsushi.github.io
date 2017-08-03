@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+//
+// 001
+//
+#screen {
+  width: 100%; height: auto;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  h1 {
+    font-size: 2.5em;
+    display: inline-block;
+  }
+}
+
+table {
+  margin: auto;
+  tr {
+    td {
+      text-align: center;
+      vertical-align: middle;
+      width: 200px;
+      span.chara {
+      font-size: 4em;
+      }
+      p {
+        font-size: 3em;
+        font-weight: bold;
+        transform: rotate(-4deg);
+      }
+    }
+    // ユーザー挙動
+    .resultP {
+      background: none;
+      transition: .25s ;
+    }
+    .resultM {
+      background: none;
+    }
+    .pahImg{
+      background: url("../images/pah.png");
+    }
+    .chokiImg{
+      background: url("../images/choki.png");
+    }
+    .guhImg{
+      background: url("../images/guh.png");
+    }
+
+    .result {
+      background-size: 50% 50%;
+      width: 200px; height: 200px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    // 中間
+    .while {
+      width: 300px;
+    }
+  }
+}
+
+
+//
+//02
+//
+body{
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  #gesture {
+    p {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  #fingers, #state {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  #content{
+    width: 100%; height: 100%;
+    position: fixed;
+    bottom: 20px;
+    canvas {
+    margin: 0 auto;
+   }
+}
+}

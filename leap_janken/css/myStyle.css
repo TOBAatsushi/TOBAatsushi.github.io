@@ -1,0 +1,38 @@
+.tgl{display:none}
+.tgl,.tgl *,.tgl :after,.tgl :before,.tgl+.tgl-btn,.tgl:after,.tgl:before{box-sizing:border-box}
+.tgl ::-moz-selection,.tgl :after::-moz-selection,.tgl :before::-moz-selection,.tgl+.tgl-btn::-moz-selection,.tgl::-moz-selection,.tgl:after::-moz-selection,.tgl:before::-moz-selection{background:0 0}
+.tgl ::selection,.tgl :after::selection,.tgl :before::selection,.tgl+.tgl-btn::selection,.tgl::selection,.tgl:after::selection,.tgl:before::selection{background:0 0}
+.tgl+.tgl-btn{outline:0;display:block;width:4em;height:2em;position:relative;cursor:pointer}
+.tgl+.tgl-btn:after,.tgl+.tgl-btn:before{position:relative;display:block;content:"";width:50%;height:100%}
+.tgl+.tgl-btn:after{left:0}
+.tgl+.tgl-btn:before{display:none}
+.tgl:checked+.tgl-btn:after{left:50%}
+.tgl-ios+.tgl-btn{background:#f76c6c;border-radius:2em;padding:2px;-webkit-transition:all .4s ease;transition:all .4s ease;border:1px solid #e8eae9}
+.tgl-ios+.tgl-btn:after{border-radius:2em;background:#fbfbfb;-webkit-transition:left .3s cubic-bezier(.175,.885,.32,1.275),padding .3s ease,margin .3s ease;transition:left .3s cubic-bezier(.175,.885,.32,1.275),padding .3s ease,margin .3s ease;box-shadow:0 0 0 1px rgba(0,0,0,.1),0 4px 0 rgba(0,0,0,.08)}
+.tgl-ios+.tgl-btn:active{box-shadow:inset 0 0 0 2em #e8eae9}
+.tgl-ios+.tgl-btn:active:after{padding-right:.8em}
+.tgl-ios:checked+.tgl-btn{background:#86d993}
+.tgl-ios:checked+.tgl-btn:active{box-shadow:none}
+.tgl-ios:checked+.tgl-btn:active:after{margin-left:-.8em}
+.btn_g{width:80px;height:38px;background:orange;border:1px solid #fb8e28;border-radius:50%;color:#fff;padding:42px 10px 20px;display:block;text-align:center;font-weight:700;font-size:100%;text-decoration:none;box-shadow:0 3px 0 rgba(0,0,0,.2);-moz-box-shadow:0 3px 0 rgba(0,0,0,.2);-webkit-box-shadow:0 3px 0 rgba(0,0,0,.2);transition:background-color .1s ease-in;-webkit-transition:background-color .1s ease-in}
+#wrap .frame,#wrap .frame.draw,#wrap .frame.lose,#wrap .frame.win{width:800px;height:786px;position:relative;z-index:48}
+.btn_g.an_clickable{pointer-events:none}
+.btn_g.clickable{pointer-events:painted}
+.btn_g:active{background:#f49200;color:#FFF;box-shadow:none;margin-top:3px;position:relative;top:2px}
+#wrap{margin:15px auto;width:800px}
+#wrap .frame{background:url(../images/frame.png) center center no-repeat;background-size:800px 786px}
+#wrap .frame.win{background:url(../images/frame-win.png) center center no-repeat;background-size:800px 786px}
+#wrap .frame.lose{background:url(../images/frame-lose.png) center center no-repeat;background-size:800px 786px}
+#wrap .frame.draw{background:url(../images/frame-even.png) center center no-repeat;background-size:800px 786px}
+#wrap .frame .dots{display:inline-block;background:center center no-repeat #000;background-size:375px 375px;width:375px;height:375px;position:absolute;border-radius:50%;top:280px;left:220px;z-index:47}
+#wrap .frame .dots.guh{background-image:url(../images/guh.png)}
+#wrap .frame .dots.choki{background-image:url(../images/choki.png)}
+#wrap .frame .dots.pah{background-image:url(../images/pah.png)}
+#wrap .frame .dots.powerOn{background-image:url(../images/bg_anime.gif)}
+#wrap .frame .dots.vs{background-image:url(../images/bg_anime2.gif)}
+#wrap .frame .circle{position:absolute;top:218px;left:160px;z-index:50}
+#wrap .frame .circle img{width:492.5px;height:492.5px}
+#wrap .switch_controll{display:table;width:100%}
+#wrap .switch_controll div{display:table-cell;width:50%;padding:0 30px;height:130px}
+#wrap .switch_controll div p{display:inline-block;height:130px}
+#wrap .switch_controll div:first-child{padding-top:45px;vertical-align:middle;text-align:right}

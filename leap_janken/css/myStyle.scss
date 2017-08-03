@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+// on-off btn
+.tgl{
+	display: none;
+	// add default box-sizing for this scope
+	&, &:after, &:before,
+	& *, & *:after, & *:before,
+	& + .tgl-btn{
+		box-sizing: border-box;
+		&::selection{
+			background: none;
+		}
+	}
+	+ .tgl-btn{
+		outline: 0;
+		display: block;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+		&:after, &:before{
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+		&:after{
+			left: 0;
+		}
+		&:before{
+			display: none;
+		}
+	}
+	&:checked{
+		+ .tgl-btn{
+			&:after{
+				left: 50%;
+			}
+		}
+	}
+}
+.tgl-ios{
+	+ .tgl-btn{
+		background: rgb(247, 108, 108);
+		border-radius: 2em;
+		padding: 2px;
+		transition: all .4s ease;
+		border: 1px solid #e8eae9;
+		&:after{
+			border-radius: 2em;
+			background: #fbfbfb;
+			transition:
+        left .3s cubic-bezier(
+          0.175, 0.885, 0.320, 1.275
+        ),
+        padding .3s ease, margin .3s ease;
+			box-shadow:
+        0 0 0 1px rgba(0,0,0,.1),
+        0 4px 0 rgba(0,0,0,.08);
+		}
+		&:active{
+			box-shadow: inset 0 0 0 2em #e8eae9;
+			&:after{
+				padding-right: .8em;
+			}
+		}
+	}
+	&:checked{
+		+ .tgl-btn{
+			background: #86d993;
+			&:active{
+				box-shadow: none;
+				&:after{
+					margin-left: -.8em;
+				}
+			}
+		}
+	}
+}
+
+// start btn
+.btn_g {
+	width: 80px;
+	height: 38px;
+	background: orange;
+	border: 1px solid rgb(251, 142, 40);
+	border-radius: 50%;
+	color: white;
+	padding: 42px 10px 20px;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 100%;
+  text-decoration: none;
+	box-shadow: 0px 3px 0px rgba(000,000,000,0.2);
+	-moz-box-shadow: 0px 3px 0px rgba(000,000,000,0.2);
+	-webkit-box-shadow: 0px 3px 0px rgba(000,000,000,0.2);
+	transition: background-color .1s ease-in;
+	-webkit-transition: background-color .1s ease-in;
+  &.an_clickable {
+    pointer-events : none;
+  }
+  &.clickable {
+    pointer-events : painted;
+  }
+}
+.btn_g:active {
+	background: #f49200;
+	color: #FFF;
+	box-shadow: none;
+	margin-top: 3px;
+	position: relative;
+	top: 2px;
+}
+
+
+
+#wrap {
+  margin: 15px auto;
+  width: 800px;
+  .frame {
+    background: url("../images/frame.png") no-repeat center center;
+    background-size: 800px 786px;
+    width: 800px; height: 786px;
+    position: relative;
+    z-index: 48;
+    &.win {
+      background: url("../images/frame-win.png") no-repeat center center;
+      background-size: 800px 786px;
+      width: 800px; height: 786px;
+      position: relative;
+      z-index: 48;
+    }
+    &.lose {
+      background: url("../images/frame-lose.png") no-repeat center center;
+      background-size: 800px 786px;
+      width: 800px; height: 786px;
+      position: relative;
+      z-index: 48;
+    }
+    &.draw {
+      background: url("../images/frame-even.png") no-repeat center center;
+      background-size: 800px 786px;
+      width: 800px; height: 786px;
+      position: relative;
+      z-index: 48;
+    }
+    .dots {
+      display: inline-block;
+      background: black no-repeat center center;
+      background-image: none;
+      background-size: 375px 375px;
+      width: 375px; height: 375px;
+      position: absolute;
+      border-radius: 50%;
+      top: 280px;
+      left: 220px;
+      z-index: 47;
+      &.guh {
+        background-image: url("../images/guh.png");
+      }
+      &.choki {
+        background-image: url("../images/choki.png");
+      }
+      &.pah {
+        background-image: url("../images/pah.png");
+      }
+      &.powerOn {
+        background-image: url("../images/bg_anime.gif");
+      }
+      &.vs {
+        background-image: url("../images/bg_anime2.gif");
+      }
+    }
+    .circle {
+      position: absolute;
+      top: 218px;
+      left: 160px;
+      z-index: 50;
+      img {
+        width: 492.5px; height: 492.5px;
+      }
+    }
+  }
+
+  // スイッチ
+  .switch_controll {
+    display: table;
+    width: 100%;
+    div {
+      display: table-cell;
+      width: 50%;
+      padding: 0 30px;
+      height: 130px;
+      p {
+        display: inline-block;
+        height: 130px;
+      }
+    }
+    div:first-child {
+      padding-top: 45px;
+      vertical-align: middle;
+      text-align: right;
+    }
+  }
+
+
+
+}
